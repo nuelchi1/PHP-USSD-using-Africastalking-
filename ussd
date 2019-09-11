@@ -1,0 +1,14 @@
+<?php
+//This file will be used in africastalking
+we need to make sure the code runs after a $_POST so we wrap using the IF
+if(!empty($_POST) && !empty($_POST['phoneNumber'])){
+	require_once('connection.php');
+	require_once('AfricasTalkingGateway.php');
+	require_once('config.php');
+	//2. receive the POST from AT
+	$sessionId     =$_POST['sessionId'];
+	$serviceCode   =$_POST['serviceCode'];
+	$phoneNumber   =$_POST['phoneNumber'];
+	$text          =$_POST['text'];
+
+?>
